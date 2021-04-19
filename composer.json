@@ -1,0 +1,283 @@
+{
+	"name": "typo3/cms",
+	"description": "TYPO3 CMS is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.",
+	"keywords": ["typo3", "cms", "content management system", "extbase"],
+	"homepage": "https://typo3.org/",
+	"type": "typo3-cms-core",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "TYPO3 CMS Core Team",
+			"role": "Developer",
+			"homepage": "https://forge.typo3.org/projects/typo3cms-core"
+		},
+		{
+			"name": "The TYPO3 Community",
+			"role": "Contributor",
+			"homepage": "https://typo3.org/community/"
+		}
+	],
+	"support": {
+		"chat": "https://typo3.org/help",
+		"docs": "https://docs.typo3.org",
+		"issues": "https://forge.typo3.org",
+		"source": "https://github.com/TYPO3/TYPO3.CMS"
+	},
+	"config": {
+		"bin-dir": "bin",
+		"platform": {
+			"php": "7.2.5"
+		},
+		"sort-packages": true
+	},
+	"require": {
+		"php": "^7.2",
+		"ext-PDO": "*",
+		"ext-json": "*",
+		"ext-libxml": "*",
+		"ext-pcre": "*",
+		"ext-session": "*",
+		"ext-xml": "*",
+		"cogpowered/finediff": "~0.3.1",
+		"doctrine/annotations": "^1.7",
+		"doctrine/dbal": "~2.10.0 || ~2.11.2",
+		"doctrine/instantiator": "^1.1",
+		"doctrine/lexer": "^1.0",
+		"egulias/email-validator": "^2.1",
+		"guzzlehttp/guzzle": "^6.3.0",
+		"nikic/php-parser": "^4.10.4",
+		"phpdocumentor/reflection-docblock": "^5.2",
+		"phpdocumentor/type-resolver": "^1.3",
+		"psr/container": "^1.0",
+		"psr/event-dispatcher": "^1.0",
+		"psr/http-client": "^1.0",
+		"psr/http-factory": "^1.0",
+		"psr/http-message": "^1.0",
+		"psr/http-server-middleware": "^1.0",
+		"psr/log": "^1.0",
+		"symfony/config": "^4.4 || ^5.0",
+		"symfony/console": "^4.4 || ^5.0",
+		"symfony/dependency-injection": "^4.4 || ^5.0",
+		"symfony/event-dispatcher-contracts": "^1.1 || ^2.0",
+		"symfony/expression-language": "^4.4 || ^5.0",
+		"symfony/finder": "^4.4 || ^5.0",
+		"symfony/http-foundation": "^4.4 || ^5.0",
+		"symfony/mailer": "^4.4.21 || ^5.2.6",
+		"symfony/mime": "^4.4.21 || ^5.2.6",
+		"symfony/polyfill-intl-icu": "^1.6",
+		"symfony/polyfill-intl-idn": "^1.10",
+		"symfony/polyfill-mbstring": "^1.2",
+		"symfony/property-access": "^4.4 || ^5.0",
+		"symfony/property-info": "^4.4 || ^5.0",
+		"symfony/routing": "^4.4 || ^5.0",
+		"symfony/var-dumper": "^4.4 || ^5.0",
+		"symfony/yaml": "^4.4 || ^5.0",
+		"typo3/class-alias-loader": "^1.0",
+		"typo3/cms-cli": "^2.0",
+		"typo3/cms-composer-installers": "^2.0 || ^3.0",
+		"typo3/phar-stream-wrapper": "^3.1.6",
+		"typo3/symfony-psr-event-dispatcher-adapter": "^1.0 || ^2.0",
+		"typo3fluid/fluid": "^2.6.10 || ^3"
+	},
+	"require-dev": {
+		"composer-runtime-api": "^2.0",
+		"codeception/codeception": "^4.0",
+		"codeception/lib-asserts": "^1.1",
+		"codeception/module-asserts": "^1.1",
+		"codeception/module-filesystem": "^1.0",
+		"codeception/module-webdriver": "^1.0.1",
+		"composer/package-versions-deprecated": "^1.10",
+		"friendsofphp/php-cs-fixer": "^2.17.3",
+		"friendsoftypo3/phpstan-typo3": "^0.5.0",
+		"php-webdriver/webdriver": "^1.8",
+		"phpspec/prophecy": "^1.12.2",
+		"phpstan/phpstan": "^0.12.64",
+		"phpunit/phpunit": "^8.5.13",
+		"typo3/cms-styleguide": "~10.0.4",
+		"typo3/testing-framework": "^6.8.0"
+	},
+	"suggest": {
+		"ext-gd": "GDlib/Freetype is required for building images with text (GIFBUILDER) and can also be used to scale images",
+		"ext-fileinfo": "Used for proper file type detection in the file abstraction layer",
+		"ext-zlib": "TYPO3 uses zlib for amongst others output compression and un/packing t3x extension files",
+		"ext-intl": "Used for locale-aware operations",
+		"ext-openssl": "OpenSSL is required for sending SMTP mails over an encrypted channel endpoint, and for extensions such as \"rsaauth\"",
+		"ext-zip": "",
+		"ext-mysqli": ""
+	},
+	"conflict": {
+		"hoa/core": "*",
+		"guzzlehttp/guzzle": "6.5.0"
+	},
+	"provide": {
+		"psr/http-client-implementation": "1.0",
+		"psr/http-factory-implementation": "1.0",
+		"psr/http-message-implementation": "1.0"
+	},
+	"extra": {
+		"typo3/class-alias-loader": {
+			"class-alias-maps": [
+				"typo3/sysext/backend/Migrations/Code/ClassAliasMap.php",
+				"typo3/sysext/core/Migrations/Code/ClassAliasMap.php"
+			],
+			"always-add-alias-loader": true
+		},
+		"branch-alias": {
+			"dev-master": "10.4.x-dev"
+		}
+	},
+	"scripts": {
+		"gerrit:setup": [
+			"@gerrit:setup:commitMessageHook:enable",
+			"@gerrit:setup:preCommitHook:enable"
+		],
+		"gerrit:setup:commitMessageHook:enable": [
+			"TYPO3\\CMS\\Composer\\Scripts\\InstallerScripts::enableCommitMessageHook"
+		],
+		"gerrit:setup:preCommitHook:enable": [
+			"TYPO3\\CMS\\Composer\\Scripts\\InstallerScripts::enablePreCommitHook"
+		],
+		"gerrit:setup:preCommitHook:disable": [
+			"TYPO3\\CMS\\Composer\\Scripts\\InstallerScripts::disablePreCommitHook"
+		]
+	},
+	"scripts-descriptions": {
+		"gerrit:setup": "Enable all the git hooks needed to make contribution easy",
+		"gerrit:setup:commitMessageHook:enable": "Enable the commit message hook needed for gerrit",
+		"gerrit:setup:preCommitHook:enable": "Enable pre commit hook to run some checks locally",
+		"gerrit:setup:preCommitHook:disable": "Disable pre commit hook to run some checks locally"
+	},
+	"non-feature-branches": [
+		"TYPO3_.+"
+	],
+	"replace": {
+		"typo3/cms-about": "self.version",
+		"typo3/cms-adminpanel": "self.version",
+		"typo3/cms-backend": "self.version",
+		"typo3/cms-belog": "self.version",
+		"typo3/cms-beuser": "self.version",
+		"typo3/cms-core": "self.version",
+		"typo3/cms-dashboard": "self.version",
+		"typo3/cms-extbase": "self.version",
+		"typo3/cms-extensionmanager": "self.version",
+		"typo3/cms-felogin": "self.version",
+		"typo3/cms-filelist": "self.version",
+		"typo3/cms-filemetadata": "self.version",
+		"typo3/cms-fluid": "self.version",
+		"typo3/cms-fluid-styled-content": "self.version",
+		"typo3/cms-form": "self.version",
+		"typo3/cms-frontend": "self.version",
+		"typo3/cms-impexp": "self.version",
+		"typo3/cms-indexed-search": "self.version",
+		"typo3/cms-info": "self.version",
+		"typo3/cms-install": "self.version",
+		"typo3/cms-linkvalidator": "self.version",
+		"typo3/cms-lowlevel": "self.version",
+		"typo3/cms-opendocs": "self.version",
+		"typo3/cms-recordlist": "self.version",
+		"typo3/cms-recycler": "self.version",
+		"typo3/cms-redirects": "self.version",
+		"typo3/cms-reports": "self.version",
+		"typo3/cms-rte-ckeditor": "self.version",
+		"typo3/cms-scheduler": "self.version",
+		"typo3/cms-seo": "self.version",
+		"typo3/cms-setup": "self.version",
+		"typo3/cms-sys-note": "self.version",
+		"typo3/cms-t3editor": "self.version",
+		"typo3/cms-tstemplate": "self.version",
+		"typo3/cms-viewpage": "self.version",
+		"typo3/cms-workspaces": "self.version"
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\CMS\\About\\": "typo3/sysext/about/Classes/",
+			"TYPO3\\CMS\\Adminpanel\\": "typo3/sysext/adminpanel/Classes/",
+			"TYPO3\\CMS\\Backend\\": "typo3/sysext/backend/Classes/",
+			"TYPO3\\CMS\\Belog\\": "typo3/sysext/belog/Classes/",
+			"TYPO3\\CMS\\Beuser\\": "typo3/sysext/beuser/Classes/",
+			"TYPO3\\CMS\\Core\\": "typo3/sysext/core/Classes/",
+			"TYPO3\\CMS\\Dashboard\\": "typo3/sysext/dashboard/Classes/",
+			"TYPO3\\CMS\\Extbase\\": "typo3/sysext/extbase/Classes/",
+			"TYPO3\\CMS\\Extensionmanager\\": "typo3/sysext/extensionmanager/Classes/",
+			"TYPO3\\CMS\\Felogin\\": "typo3/sysext/felogin/Classes/",
+			"TYPO3\\CMS\\FrontendLogin\\": "typo3/sysext/felogin/Classes/",
+			"TYPO3\\CMS\\Filelist\\": "typo3/sysext/filelist/Classes/",
+			"TYPO3\\CMS\\Fluid\\": "typo3/sysext/fluid/Classes/",
+			"TYPO3\\CMS\\FluidStyledContent\\": "typo3/sysext/fluid_styled_content/Classes/",
+			"TYPO3\\CMS\\Form\\": "typo3/sysext/form/Classes/",
+			"TYPO3\\CMS\\Frontend\\": "typo3/sysext/frontend/Classes/",
+			"TYPO3\\CMS\\Impexp\\": "typo3/sysext/impexp/Classes/",
+			"TYPO3\\CMS\\IndexedSearch\\": "typo3/sysext/indexed_search/Classes/",
+			"TYPO3\\CMS\\Info\\": "typo3/sysext/info/Classes/",
+			"TYPO3\\CMS\\Install\\": "typo3/sysext/install/Classes/",
+			"TYPO3\\CMS\\Linkvalidator\\": "typo3/sysext/linkvalidator/Classes/",
+			"TYPO3\\CMS\\Lowlevel\\": "typo3/sysext/lowlevel/Classes/",
+			"TYPO3\\CMS\\Opendocs\\": "typo3/sysext/opendocs/Classes/",
+			"TYPO3\\CMS\\Recordlist\\": "typo3/sysext/recordlist/Classes/",
+			"TYPO3\\CMS\\Recycler\\": "typo3/sysext/recycler/Classes/",
+			"TYPO3\\CMS\\Redirects\\": "typo3/sysext/redirects/Classes/",
+			"TYPO3\\CMS\\Reports\\": "typo3/sysext/reports/Classes/",
+			"TYPO3\\CMS\\RteCKEditor\\": "typo3/sysext/rte_ckeditor/Classes/",
+			"TYPO3\\CMS\\Scheduler\\": "typo3/sysext/scheduler/Classes/",
+			"TYPO3\\CMS\\Seo\\": "typo3/sysext/seo/Classes/",
+			"TYPO3\\CMS\\Setup\\": "typo3/sysext/setup/Classes/",
+			"TYPO3\\CMS\\SysNote\\": "typo3/sysext/sys_note/Classes/",
+			"TYPO3\\CMS\\T3editor\\": "typo3/sysext/t3editor/Classes/",
+			"TYPO3\\CMS\\Tstemplate\\": "typo3/sysext/tstemplate/Classes/",
+			"TYPO3\\CMS\\Viewpage\\": "typo3/sysext/viewpage/Classes/",
+			"TYPO3\\CMS\\Workspaces\\": "typo3/sysext/workspaces/Classes/"
+		},
+		"classmap": [
+			"typo3/sysext/core/Resources/PHP/"
+		],
+		"files": [
+			"typo3/sysext/core/Resources/PHP/GlobalDebugFunctions.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"TYPO3\\CMS\\Adminpanel\\Tests\\": "typo3/sysext/adminpanel/Tests/",
+			"TYPO3\\CMS\\Backend\\Tests\\": "typo3/sysext/backend/Tests/",
+			"TYPO3\\CMS\\Belog\\Tests\\": "typo3/sysext/belog/Tests/",
+			"TYPO3\\CMS\\Beuser\\Tests\\": "typo3/sysext/beuser/Tests/",
+			"TYPO3\\CMS\\Core\\Tests\\": "typo3/sysext/core/Tests/",
+			"TYPO3\\CMS\\Composer\\Scripts\\": "Build/Scripts/composer/",
+			"TYPO3\\CMS\\Dashboard\\Tests\\": "typo3/sysext/dashboard/Tests/",
+			"TYPO3\\CMS\\Extbase\\Tests\\": "typo3/sysext/extbase/Tests/",
+			"TYPO3\\CMS\\Extensionmanager\\Tests\\": "typo3/sysext/extensionmanager/Tests/",
+			"TYPO3\\CMS\\Felogin\\Tests\\": "typo3/sysext/felogin/Tests/",
+			"TYPO3\\CMS\\FrontendLogin\\Tests\\": "typo3/sysext/felogin/Tests/",
+			"TYPO3\\CMS\\Filemetadata\\Tests\\": "typo3/sysext/filemetadata/Tests/",
+			"TYPO3\\CMS\\Fluid\\Tests\\": "typo3/sysext/fluid/Tests/",
+			"TYPO3\\CMS\\FluidStyledContent\\Tests\\": "typo3/sysext/fluid_styled_content/Tests/",
+			"TYPO3\\CMS\\Form\\Tests\\": "typo3/sysext/form/Tests/",
+			"TYPO3\\CMS\\Frontend\\Tests\\": "typo3/sysext/frontend/Tests/",
+			"TYPO3\\CMS\\Impexp\\Tests\\": "typo3/sysext/impexp/Tests/",
+			"TYPO3\\CMS\\IndexedSearch\\Tests\\": "typo3/sysext/indexed_search/Tests/",
+			"TYPO3\\CMS\\Install\\Tests\\": "typo3/sysext/install/Tests/",
+			"TYPO3\\CMS\\Linkvalidator\\Tests\\": "typo3/sysext/linkvalidator/Tests/",
+			"TYPO3\\CMS\\Lowlevel\\Tests\\": "typo3/sysext/lowlevel/Tests/",
+			"TYPO3\\CMS\\Opendocs\\Tests\\": "typo3/sysext/opendocs/Tests/",
+			"TYPO3\\CMS\\Redirects\\Tests\\": "typo3/sysext/redirects/Tests/",
+			"TYPO3\\CMS\\Recordlist\\Tests\\": "typo3/sysext/recordlist/Tests/",
+			"TYPO3\\CMS\\Reports\\Tests\\": "typo3/sysext/reports/Tests/",
+			"TYPO3\\CMS\\Scheduler\\Tests\\": "typo3/sysext/scheduler/Tests/",
+			"TYPO3\\CMS\\Seo\\Tests\\": "typo3/sysext/seo/Tests/",
+			"TYPO3\\CMS\\Setup\\Tests\\": "typo3/sysext/setup/Tests/",
+			"TYPO3\\CMS\\SysNote\\Tests\\": "typo3/sysext/sys_note/Tests/",
+			"TYPO3\\CMS\\Workspaces\\Tests\\": "typo3/sysext/workspaces/Tests/",
+			"TYPO3\\CMS\\Recycler\\Tests\\": "typo3/sysext/recycler/Tests/",
+			"TYPO3\\CMS\\T3editor\\Tests\\": "typo3/sysext/t3editor/Tests/"
+		},
+		"classmap": [
+			"typo3/sysext/core/Tests/Unit/Core/Fixtures/test_extension/",
+			"typo3/sysext/core/Tests/Functional/Fixtures/",
+			"typo3/sysext/extbase/Tests/Unit/Object/Container/Fixtures/",
+			"typo3/sysext/extbase/Tests/Functional/Fixtures/",
+			"typo3/sysext/fluid/Tests/Functional/Fixtures/Extensions/fluid_test/Classes/"
+		],
+		"files": [
+			"typo3/sysext/extbase/Tests/Fixture/TxClassWithGettersAndSetters.php"
+		]
+	}
+}
