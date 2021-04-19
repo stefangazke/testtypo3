@@ -1,0 +1,57 @@
+{
+	"name": "typo3/cms-redirects",
+	"type": "typo3-cms-framework",
+	"description": "Custom redirects in TYPO3.",
+	"homepage": "https://typo3.org",
+	"license": ["GPL-2.0-or-later"],
+	"authors": [{
+		"name": "TYPO3 Core Team",
+		"email": "typo3cms@typo3.org",
+		"role": "Developer"
+	}],
+	"support": {
+		"chat": "https://typo3.org/help",
+		"docs": "https://docs.typo3.org",
+		"issues": "https://forge.typo3.org",
+		"source": "https://github.com/TYPO3/TYPO3.CMS"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"require": {
+		"doctrine/dbal": "~2.10.0 || ~2.11.2",
+		"psr/http-message": "^1.0",
+		"psr/log": "^1.0",
+		"typo3/cms-backend": "10.4.15",
+		"typo3/cms-core": "10.4.15",
+		"typo3fluid/fluid": "^2.6.10 || ^3"
+	},
+	"conflict": {
+		"typo3/cms": "*"
+	},
+	"suggest": {
+		"typo3/cms-reports": "Get reports of redirects",
+		"typo3/cms-scheduler": "Execute commands to update redirect status"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "10.4.x-dev"
+		},
+		"typo3/cms": {
+			"extension-key": "redirects",
+			"Package": {
+				"partOfFactoryDefault": true
+			}
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\CMS\\Redirects\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"TYPO3\\CMS\\Redirects\\Tests\\": "Tests/"
+		}
+	}
+}

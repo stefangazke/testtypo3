@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TYPO3\CMS\FrontendLogin\Service\:
+    resource: '../Classes/Service/*'
+
+  TYPO3\CMS\FrontendLogin\Domain\Repository\:
+    resource: '../Classes/Domain/Repository/*'

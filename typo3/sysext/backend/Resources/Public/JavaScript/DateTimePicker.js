@@ -1,0 +1,13 @@
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+var __importDefault=this&&this.__importDefault||function(t){return t&&t.__esModule?t:{default:t}};define(["require","exports","jquery","moment","./Storage/Persistent"],(function(t,e,a,i,r){"use strict";a=__importDefault(a),i=__importDefault(i);class d{constructor(t){this.fieldSelector=".t3js-datetimepicker",this.format=(null!=opener&&void 0!==opener.top.TYPO3?opener.top:top).TYPO3.settings.DateTimePicker.DateFormat,a.default(()=>{this.initialize(t)})}static formatDateForHiddenField(t,e){return"time"!==e&&"timesec"!==e||t.year(1970).month(0).date(1),t.format()}initialize(e){const o=a.default(e||this.fieldSelector).filter((t,e)=>void 0===a.default(e).data("DateTimePicker"));o.length>0&&t(["twbs/bootstrap-datetimepicker"],()=>{let t=r.get("lang");"ch"===t&&(t="zh-cn");const e=t?i.default.locale(t):"";o.each((t,i)=>{this.initializeField(a.default(i),e)}),o.on("blur",t=>{const e=a.default(t.currentTarget),r=e.parent().parent().find('input[type="hidden"]');if(""===e.val())r.val("");else{const t=e.data("dateType"),a=e.data("DateTimePicker").format(),o=i.default.utc(e.val(),a);o.isValid()?r.val(d.formatDateForHiddenField(o,t)):e.val(d.formatDateForHiddenField(i.default.utc(r.val()),t))}}),o.on("dp.change",t=>{const e=a.default(t.currentTarget),i=e.parent().parent().find("input[type=hidden]"),r=e.data("dateType");let o="";""!==e.val()&&(o=d.formatDateForHiddenField(t.date.utc(),r)),i.val(o),a.default(document).trigger("formengine.dp.change",[e])})})}initializeField(t,e){const a=this.format,r={format:"",locale:"",sideBySide:!0,showTodayButton:!0,toolbarPlacement:"bottom",icons:{time:"fa fa-clock-o",date:"fa fa-calendar",up:"fa fa-chevron-up",down:"fa fa-chevron-down",previous:"fa fa-chevron-left",next:"fa fa-chevron-right",today:"fa fa-calendar-o",clear:"fa fa-trash"}};switch(t.data("dateType")){case"datetime":r.format=a[1];break;case"date":r.format=a[0];break;case"time":r.format="HH:mm";break;case"timesec":r.format="HH:mm:ss";break;case"year":r.format="YYYY"}t.data("dateMindate")&&t.data("dateMindate",i.default.unix(t.data("dateMindate")).format(r.format)),t.data("dateMaxdate")&&t.data("dateMaxdate",i.default.unix(t.data("dateMaxdate")).format(r.format)),e&&(r.locale=e),t.datetimepicker(r)}}return new d}));

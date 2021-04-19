@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TYPO3\CMS\Reports\:
+    resource: '../Classes/*'
+    # Tasks require EXT:scheduler to be installed, ignore for now.
+    exclude: '../Classes/Task'

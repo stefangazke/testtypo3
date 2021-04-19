@@ -1,0 +1,13 @@
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+var __importDefault=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};define(["require","exports","jquery","TYPO3/CMS/Backend/Utility/MessageUtility","./ElementBrowser","nprogress","TYPO3/CMS/Backend/LegacyTree","TYPO3/CMS/Core/Event/RegularEvent"],(function(e,t,n,l,i,o,s,r){"use strict";n=__importDefault(n);var a=TYPO3.Icons;class c{constructor(){s.noop(),c.File=new d,c.Selector=new u,n.default(()=>{c.elements=n.default("body").data("elements"),n.default("[data-close]").on("click",e=>{e.preventDefault(),c.File.insertElement("file_"+n.default(e.currentTarget).data("fileIndex"),1===parseInt(n.default(e.currentTarget).data("close"),10))}),new r("change",()=>{c.Selector.toggleImportButton()}).delegateTo(document,".typo3-bulk-item"),n.default("#t3js-importSelection").on("click",c.Selector.handle),n.default("#t3js-toggleSelection").on("click",c.Selector.toggle)})}}class d{insertElement(e,t){let n=!1;if(void 0!==c.elements[e]){const l=c.elements[e];n=i.insertElement(l.table,l.uid,l.type,l.fileName,l.filePath,l.fileExt,l.fileIcon,"",t)}return n}}class u{constructor(){this.toggle=e=>{e.preventDefault();const t=this.getItems();t.length&&t.each((e,t)=>{t.checked=t.checked?null:"checked"}),this.toggleImportButton()},this.handle=e=>{e.preventDefault();const t=this.getItems(),n=[];t.length&&(t.each((e,t)=>{t.checked&&t.name&&n.unshift(t.name)}),a.getIcon("spinner-circle",a.sizes.small,null,null,a.markupIdentifiers.inline).then(t=>{e.currentTarget.classList.add("disabled"),e.currentTarget.innerHTML=t}),this.handleSelection(n))}}getItems(){return n.default("#typo3-filelist").find(".typo3-bulk-item")}toggleImportButton(){const e=document.querySelectorAll("#typo3-filelist .typo3-bulk-item:checked").length>0;document.getElementById("t3js-importSelection").classList.toggle("disabled",!e)}handleSelection(e){o.configure({parent:"#typo3-filelist",showSpinner:!1}),o.start();const t=1/e.length;this.handleNext(e),new r("message",n=>{if(!l.MessageUtility.verifyOrigin(n.origin))throw"Denied message sent by "+n.origin;"typo3:foreignRelation:inserted"===n.data.actionName&&(e.length>0?(o.inc(t),this.handleNext(e)):(o.done(),i.focusOpenerAndClose()))}).bindTo(window)}handleNext(e){if(e.length>0){const t=e.pop();c.File.insertElement(t)}}}return new c}));

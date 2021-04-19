@@ -1,0 +1,95 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TYPO3\CMS\Backend\:
+    resource: '../Classes/*'
+
+  TYPO3\CMS\Backend\Command\LockBackendCommand:
+    tags:
+      - { name: 'console.command', command: 'backend:lock' }
+
+  TYPO3\CMS\Backend\Command\UnlockBackendCommand:
+    tags:
+      - { name: 'console.command', command: 'backend:unlock' }
+
+  TYPO3\CMS\Backend\Command\ReferenceIndexUpdateCommand:
+    tags:
+      - { name: 'console.command', command: 'referenceindex:update' }
+
+  TYPO3\CMS\Backend\Command\ResetPasswordCommand:
+    tags:
+      - { name: 'console.command', command: 'backend:resetpassword', schedulable: false }
+
+  # Temporary workaround until testing framework loads EXT:fluid in functional tests
+  # @todo: Fix typo3/testing-framework and remove this
+  TYPO3\CMS\Backend\View\BackendTemplateView:
+    autoconfigure: false
+
+  TYPO3\CMS\Backend\Template\ModuleTemplate:
+    shared: false
+    public: true
+
+  TYPO3\CMS\Backend\Controller\File\ImageProcessController:
+    shared: false
+    public: true
+
+  TYPO3\CMS\Backend\View\PageLayoutView:
+    shared: false
+    public: true
+
+  TYPO3\CMS\Backend\History\RecordHistoryRollback:
+    public: true
+
+  TYPO3\CMS\Backend\Controller\EditDocumentController:
+    tags: ['backend.controller']
+
+  TYPO3\CMS\Backend\Controller\LoginController:
+    tags: ['backend.controller']
+
+  TYPO3\CMS\Backend\Controller\HelpController:
+    tags: ['backend.controller']
+
+  TYPO3\CMS\Backend\Form\FormDataProvider\SiteDatabaseEditRow:
+    public: true
+
+  # Listener for old Signal Slots
+  TYPO3\CMS\Backend\Compatibility\SlotReplacement:
+    tags:
+      - name: event.listener
+        identifier: 'legacy-slot'
+        method: 'onSystemInformationToolbarEvent'
+        event: TYPO3\CMS\Backend\Backend\Event\SystemInformationToolbarCollectorEvent
+      - name: event.listener
+        identifier: 'legacy-slot'
+        method: 'onLoginProviderGetPageRenderer'
+        event: TYPO3\CMS\Backend\LoginProvider\Event\ModifyPageLayoutOnLoginProviderSelectionEvent
+      - name: event.listener
+        identifier: 'legacy-slot'
+        method: 'emitGetPagesTSconfigPreIncludeSignalBackendUtility'
+        event: TYPO3\CMS\Core\Configuration\Event\ModifyLoadedPageTsConfigEvent
+      - name: event.listener
+        identifier: 'legacy-slot'
+        method: 'onPreInitEditDocumentController'
+        event: TYPO3\CMS\Backend\Controller\Event\BeforeFormEnginePageInitializedEvent
+      - name: event.listener
+        identifier: 'legacy-slot'
+        method: 'onInitEditDocumentController'
+        event: TYPO3\CMS\Backend\Controller\Event\AfterFormEnginePageInitializedEvent
+
+  # Category security checks for backend users
+  TYPO3\CMS\Backend\Security\CategoryPermissionsAspect:
+    tags:
+      - name: event.listener
+        identifier: 'backend-user-permissions'
+        method: 'addUserPermissionsToCategoryTreeData'
+        event: TYPO3\CMS\Core\Tree\Event\ModifyTreeDataEvent
+
+  # Listener to provide information about column without a colPos set
+  TYPO3\CMS\Backend\View\PageLayoutViewDrawEmptyColposContent:
+    tags:
+      - name: event.listener
+        identifier: 'backend-empty-colpos'
+        event:  TYPO3\CMS\Backend\View\Event\AfterSectionMarkupGeneratedEvent

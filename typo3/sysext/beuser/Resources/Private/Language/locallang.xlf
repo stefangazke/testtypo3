@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1415814783" source-language="en" datatype="plaintext" original="EXT:beuser/Resources/Private/Language/locallang.xlf" date="2012-07-16T10:11:32Z" product-name="beuser">
+		<header/>
+		<body>
+			<trans-unit id="activeSessions" resname="activeSessions">
+				<source>Active Sessions</source>
+			</trans-unit>
+			<trans-unit id="userName" resname="userName">
+				<source>Username</source>
+			</trans-unit>
+			<trans-unit id="realName" resname="realName">
+				<source>Real Name</source>
+			</trans-unit>
+			<trans-unit id="lastAccess" resname="lastAccess">
+				<source>Last access</source>
+			</trans-unit>
+			<trans-unit id="ipAddress" resname="ipAddress">
+				<source>IP address</source>
+			</trans-unit>
+			<trans-unit id="backendUserListing" resname="backendUserListing">
+				<source>Backend User Listing</source>
+			</trans-unit>
+			<trans-unit id="subGroups" resname="subGroups">
+				<source>Sub Groups</source>
+			</trans-unit>
+			<trans-unit id="email" resname="email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="admin" resname="admin">
+				<source>Admin</source>
+			</trans-unit>
+			<trans-unit id="users" resname="users">
+				<source>Users</source>
+			</trans-unit>
+			<trans-unit id="yes" resname="yes">
+				<source>Yes</source>
+			</trans-unit>
+			<trans-unit id="no" resname="no">
+				<source>No</source>
+			</trans-unit>
+			<trans-unit id="never" resname="never">
+				<source>Never</source>
+			</trans-unit>
+			<trans-unit id="edit" resname="edit">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="delete" resname="delete">
+				<source>Delete backend user (!)</source>
+			</trans-unit>
+			<trans-unit id="details" resname="details">
+				<source>Show details</source>
+			</trans-unit>
+			<trans-unit id="info" resname="info">
+				<source>Display information</source>
+			</trans-unit>
+			<trans-unit id="disable" resname="disable">
+				<source>Disable</source>
+			</trans-unit>
+			<trans-unit id="disable_compare" resname="disable_compare">
+				<source>Is active?</source>
+			</trans-unit>
+			<trans-unit id="startDateAndTime" resname="startDateAndTime">
+				<source>Start</source>
+			</trans-unit>
+			<trans-unit id="endDateAndTime" resname="endDateAndTime">
+				<source>Stop</source>
+			</trans-unit>
+			<trans-unit id="lastLogin" resname="lastLogin">
+				<source>Last login</source>
+			</trans-unit>
+			<trans-unit id="allowedLanguages" resname="allowedLanguages">
+				<source>Limit to languages</source>
+			</trans-unit>
+			<trans-unit id="dbMountPoints" resname="dbMountPoints">
+				<source>DB mountpoints</source>
+			</trans-unit>
+			<trans-unit id="fileMounts" resname="fileMounts">
+				<source>File mountpoints</source>
+			</trans-unit>
+			<trans-unit id="disableIpLock" resname="disableIpLock">
+				<source>Disable IP lock</source>
+			</trans-unit>
+			<trans-unit id="compareBackendUsers" resname="compareBackendUsers">
+				<source>Compare backend users</source>
+			</trans-unit>
+			<trans-unit id="compareUserList" resname="compareUserList">
+				<source>Compare user list</source>
+			</trans-unit>
+			<trans-unit id="compareBackendUsersGroups" resname="compareBackendUsersGroups">
+				<source>Compare backend usergroups</source>
+			</trans-unit>
+			<trans-unit id="clearCompareList" resname="clearCompareList">
+				<source>Clear compare list</source>
+			</trans-unit>
+			<trans-unit id="status" resname="status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="both" resname="both">
+				<source>Both</source>
+			</trans-unit>
+			<trans-unit id="any" resname="any">
+				<source>Any</source>
+			</trans-unit>
+			<trans-unit id="adminOnly" resname="adminOnly">
+				<source>Admin only</source>
+			</trans-unit>
+			<trans-unit id="normalUserOnly" resname="normalUserOnly">
+				<source>Normal users only</source>
+			</trans-unit>
+			<trans-unit id="activeOnly" resname="activeOnly">
+				<source>Active only</source>
+			</trans-unit>
+			<trans-unit id="inactiveOnly" resname="inactiveOnly">
+				<source>Inactive only</source>
+			</trans-unit>
+			<trans-unit id="loginBefore" resname="loginBefore">
+				<source>Logged in before</source>
+			</trans-unit>
+			<trans-unit id="neverLoggedIn" resname="neverLoggedIn">
+				<source>Never logged in</source>
+			</trans-unit>
+			<trans-unit id="filter" resname="filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="reallyLogout" resname="reallyLogout">
+				<source>Really logout</source>
+			</trans-unit>
+			<trans-unit id="endSession" resname="endSession">
+				<source>End session</source>
+			</trans-unit>
+			<trans-unit id="backendUsers" resname="backendUsers">
+				<source>Backend users</source>
+			</trans-unit>
+			<trans-unit id="compareUsers" resname="compareUsers">
+				<source>Compare backend users</source>
+			</trans-unit>
+			<trans-unit id="backendUserGroupsMenu" resname="backendUserGroupsMenu">
+				<source>Backend user groups</source>
+			</trans-unit>
+			<trans-unit id="onlineUsers" resname="onlineUsers">
+				<source>Online users</source>
+			</trans-unit>
+			<trans-unit id="backendUserAdministration" resname="backendUserAdministration">
+				<source>Backend User Administration</source>
+			</trans-unit>
+			<trans-unit id="backendUserGroup" resname="backendUserGroup">
+				<source>User group</source>
+			</trans-unit>
+			<trans-unit id="backendUserGroups" resname="backendUserGroups">
+				<source>Member of groups</source>
+			</trans-unit>
+			<trans-unit id="changeToMode" resname="changeToMode">
+				<source>[change-to mode]</source>
+			</trans-unit>
+			<trans-unit id="switchBackMode" resname="switchBackMode">
+				<source>Switch to user</source>
+			</trans-unit>
+			<trans-unit id="confirm" resname="confirm">
+				<source>Are you sure you want to delete this backend user %s?</source>
+			</trans-unit>
+			<trans-unit id="section.compare" resname="section.compare">
+				<source>Compare</source>
+			</trans-unit>
+			<trans-unit id="section.allUserGroups" resname="section.allUserGroups">
+				<source>All User Groups</source>
+			</trans-unit>
+			<trans-unit id="compare" resname="compare">
+				<source>Compare</source>
+			</trans-unit>
+			<trans-unit id="remove" resname="remove">
+				<source>Remove</source>
+			</trans-unit>
+			<trans-unit id="terminateSessionSuccess" resname="terminateSessionSuccess">
+				<source>Session successfully terminated.</source>
+			</trans-unit>
+			<trans-unit id="backendUserGroupListing" resname="backendUserGroupListing">
+				<source>Backend User Group Listing</source>
+			</trans-unit>
+			<trans-unit id="online" resname="online">
+				<source>online</source>
+			</trans-unit>
+			<trans-unit id="visibility.hide" resname="visibility.hide">
+				<source>Hide</source>
+			</trans-unit>
+			<trans-unit id="visibility.unhide" resname="visibility.unhide">
+				<source>Un-hide</source>
+			</trans-unit>
+			<trans-unit id="information.defaultLanguage" resname="information.defaultLanguage">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="groups" resname="groups">
+				<source>Groups</source>
+			</trans-unit>
+			<trans-unit id="information.groups.direct" resname="information.groups.direct">
+				<source>Directly assigned</source>
+			</trans-unit>
+			<trans-unit id="information.groups.inheritance" resname="information.groups.inheritance">
+				<source>Assigned through inheritance</source>
+			</trans-unit>
+			<trans-unit id="languages" resname="languages">
+				<source>Languages</source>
+			</trans-unit>
+			<trans-unit id="dbMounts" resname="dbMounts">
+				<source>DB Mounts</source>
+			</trans-unit>
+			<trans-unit id="fileMounts" resname="fileMounts">
+				<source>File Mounts</source>
+			</trans-unit>
+			<trans-unit id="categories" resname="categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="permissions" resname="permissions">
+				<source>Permissions</source>
+			</trans-unit>
+			<trans-unit id="modules" resname="modules">
+				<source>Modules</source>
+			</trans-unit>
+			<trans-unit id="tableModes" resname="tableModes">
+				<source>Table select/modify</source>
+			</trans-unit>
+			<trans-unit id="tableModes.select" resname="tableModes.select">
+				<source>Select</source>
+			</trans-unit>
+			<trans-unit id="tableModes.modify" resname="tableModes.modify">
+				<source>Modify</source>
+			</trans-unit>
+			<trans-unit id="information.defaultWorkspace" resname="information.defaultWorkspace">
+				<source>Default workspace</source>
+			</trans-unit>
+			<trans-unit id="backendUser" resname="backendUser">
+				<source>Backend User</source>
+			</trans-unit>
+			<trans-unit id="flashMessage.resetPassword.error.title" resname="flashMessage.resetPassword.error.title">
+				<source>Password reset not triggered</source>
+			</trans-unit>
+			<trans-unit id="flashMessage.resetPassword.error.text" resname="flashMessage.resetPassword.error.text">
+				<source>Sorry, the password of this user cannot be reset.</source>
+			</trans-unit>
+			<trans-unit id="flashMessage.resetPassword.success.title" resname="flashMessage.resetPassword.success.title">
+				<source>Password reset triggered</source>
+			</trans-unit>
+			<trans-unit id="flashMessage.resetPassword.success.text" resname="flashMessage.resetPassword.success.text">
+				<source>Password reset for email address %s initiated.</source>
+			</trans-unit>
+			<trans-unit id="resetPassword.label" resname="resetPassword.label">
+				<source>Reset Password</source>
+			</trans-unit>
+			<trans-unit id="resetPassword.confirmation.header" resname="resetPassword.confirmation.header">
+				<source>Reset Password</source>
+			</trans-unit>
+			<trans-unit id="resetPassword.confirmation.text" resname="resetPassword.confirmation.text">
+				<source>Are you sure you want to reset the password for %s?</source>
+			</trans-unit>
+			<trans-unit id="compare.tables" resname="compare.tables">
+				<source>Table permissions</source>
+			</trans-unit>
+			<trans-unit id="compare.direct.inherit" resname="compare.direct.inherit">
+				<source>Inherit</source>
+			</trans-unit>
+			<trans-unit id="compare.direct.direct" resname="compare.direct.direct">
+				<source>Direct</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

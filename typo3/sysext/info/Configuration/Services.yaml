@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TYPO3\CMS\Info\:
+    resource: '../Classes/*'
+
+  TYPO3\CMS\Info\Controller\InfoModuleController:
+    tags: ['backend.controller']
